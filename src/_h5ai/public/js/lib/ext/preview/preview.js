@@ -268,8 +268,6 @@ const init = () => {
                 exit();
             }
         })
-        .on('mousedown', dropEvent)
-        .on('mousemove', dropEvent)
         .on('keydown', dropEvent)
         .on('keypress', dropEvent);
 

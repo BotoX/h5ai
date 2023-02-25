@@ -26,6 +26,7 @@ const updateGui = () => {
         labels.push(String((100 * elW / elNW).toFixed(0)) + '%');
     }
     preview.setLabels(labels);
+    triggerEvent(el, 'wheelzoom.reset');
 };
 
 const requestSample = href => {
@@ -51,6 +52,7 @@ const load = item => {
             const $el = dom(tpl)
                 .on('load', () => resolve($el))
                 .attr('src', href);
+            wheelzoom($el);
         }));
 };
 
